@@ -46,7 +46,7 @@ const RedirectPage = ({ linkObj }: PageProps) => {
 			// Перенаправляем на единственную ссылку
 			router.replace(linkObj.link);
 		} else if (linkObj.type === "multi_platform") {
-			let platform: string = getOS();
+			const platform = getOS();
 
 			const destination = linkObj[platform];
 
